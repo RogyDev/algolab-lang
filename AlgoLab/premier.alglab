@@ -1,0 +1,37 @@
+Algorithme Nombre_premier
+Variables
+
+entier a
+entier q
+entier r
+booleen pr
+entier b
+entier i
+
+Debut
+
+ecrire("entre _a")
+lire (a)
+
+pr = true
+b = a/2
+i=b
+tantque( i>1 && pr == true )
+
+q = a/i
+q = fix(q)
+r = a - (q*2)
+
+si ( r == 0 )
+  pr = false
+finsi
+ i = i - 1
+fintantque
+
+si ( pr )
+  ecrire("premier")
+sinon
+  ecrire("non premier")
+finsi
+
+Fin

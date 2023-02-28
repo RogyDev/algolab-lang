@@ -1,0 +1,26 @@
+Algorithme Somme_de_vecs
+Variables
+
+entier i
+entier s
+
+vecteur v1 de 5 entier
+vecteur v2 de 5 entier
+vecteur v3 de 5 entier
+
+Debut
+
+i = 0
+pour i (i<4)
+    v1[i] = i
+    v2[i] = i + 1
+finpour
+
+
+i = 0
+pour i (i<4)
+    s = v1[i] * v2[i]
+    v3[i] = s
+finpour
+
+Fin

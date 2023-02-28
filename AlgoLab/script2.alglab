@@ -1,0 +1,22 @@
+Algorithme Somme2Nombres
+// Le somme de 2 nombres
+Variables
+
+entier n1
+entier n2
+entier s
+chain nom
+
+Debut
+
+ecrire('entrer.votre.nom: ') 
+lire(nom)
+ecrire(['bonjour-', nom]) 
+ecrire('n1') 
+lire(n1)
+ecrire('n2') 
+lire(n2)
+s=n1+n2
+ecrire([num2str(n1), ' + ' , num2str(n2), ' = ' , num2str(s)]) 
+
+Fin

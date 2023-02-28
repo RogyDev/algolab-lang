@@ -1,0 +1,22 @@
+Algorithme Pair_ou_impair
+Variables
+
+entier a
+entier q
+entier r
+
+Debut
+ecrire("entre _a")
+lire (a)
+
+q = a/2
+q = fix(q)
+r = a - (q*2)
+
+si ( r == 0 )
+  ecrire("pair")
+sinon
+  ecrire("impair")
+finsi
+
+Fin

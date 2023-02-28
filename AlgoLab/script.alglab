@@ -1,0 +1,51 @@
+Algorithme TestingScript
+Variables
+
+entier a
+entier b
+entier c
+booleen pr
+chain text
+vecteur vec de 5 entier 
+vecteur vec2 de 6 chain
+entier i
+entier h
+chain text_2
+chain text3d
+
+Debut
+
+text = 'hello!'
+text3d = text
+ecrire ('Hello world!') 
+c = 1
+a = 41 - 2 + 1
+b = 7 + a
+h = a + b + 1
+c = c + a
+pr = true
+vec[0] = a + 10
+vec2[2] = 'finn'
+
+text_2 = vec2[3 - 1]
+
+si (2>1)
+c = 55
+
+sinon
+c = 90
+
+finsi
+
+c = 0
+
+tantque(c<8)
+	c = c+1
+fintantque
+
+i=0
+pour i (i<4)
+    vec[i] = i+1
+finpour
+
+Fin
