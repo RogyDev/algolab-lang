@@ -111,15 +111,22 @@ while(i < length(r))
                    end
              end
         end
+
+        
     else
         
-        if(once_fix) 
-            once_fix = false; 
-            ws{varNum, 1} = '_0_';
-            ws{varNum, 2} = '_0_';
-            ws{varNum, 3} = varNum + 1;
-            varNum = varNum + 1;
-        end
+    %{
+    if(once_fix) 
+        once_fix = false; 
+        disp('varNumvarNum');
+        disp(size(ws));
+        ws{varNum, 1} = '_0_';
+        ws{varNum, 2} = '_0_';
+        ws{varNum, 3} = varNum + 1;
+        varNum = varNum + 1;
+    end
+    %}
+        
     % ------------------- Code ---------------------
     %tokens = strsplit(line);
     tokens = SplitTokens(line);
@@ -156,34 +163,6 @@ while(i < length(r))
                     break;
                end
                 if(strcmp(ws{varIndex, 1}, 'vecteur'))
-                   %{ 
-                    to_assign = '';
-                    aterms_start = false;
-                    for aterms = j+1 : length(tokens)
-                        if(aterms_start == false)
-                            if(strcmp(tokens{aterms}, '='))
-                                aterms_start = true;
-                                continue;
-                            else
-                                continue;
-                            end
-                        end
-                        a_n_term = tokens{aterms};
-                        for kk =1:(varNum - 1) 
-                            if(strcmp(a_n_term, ws{kk, 2}))
-                                switch(ws{kk, 1})
-                                    case 'entier'
-                                        a_n_term = num2str(ws{kk, 3});
-                                    otherwise
-                                        a_n_term = ws{kk, 3}; 
-                                end                                        
-                            end
-                        end
-                         to_assign = strcat(to_assign , a_n_term);
-                    end
-                           
-                    op_result = eval(to_assign);
-                   %}
                     op_result =  GetResult(ws, j, tokens, true);
                     if(vec_set_index > length( ws{varIndex, 3}))
                         writefunc(app, ['Erreur en ligne ', num2str(i), ' : L"indice ne doit pas etre plus grand que ', num2str(length( ws{varIndex, 3}))]);

@@ -7,23 +7,23 @@ entier c
 entier mx
 
 Debut
-
-ecrire('entre_a')
-lire (a)
-ecrire('entre_b')
-lire (b)
-ecrire('entre_c')
-lire (c)
-
-mx = a
-
-si( b > a)
-mx = b
-finsi
-
-si( c > mx )
-mx = c
-finsi
-
-ecrire(num2str(mx))
+    
+    ecrire('entre_a')
+    lire (a)
+    ecrire('entre_b')
+    lire (b)
+    ecrire('entre_c')
+    lire (c)
+    
+    mx = a
+    
+    si( b > a)
+        mx = b
+    finsi
+    
+    si( c > mx )
+        mx = c
+    finsi
+    
+    ecrire(num2str(mx))
 Fin

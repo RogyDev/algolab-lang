@@ -7,14 +7,14 @@ entier i
 
 Debut
 
-loyer = 18000
-annes = 0
-
-tantque(loyer < 23000)
-  loyer = loyer + loyer * 0.03
-  annes = annes + 1
-fintantque
-
-ecrire(['le-nombre-des-annes-est:', num2str(annes)])
+    loyer = 18000
+    annes = 0
+    
+    tantque(loyer < 23000)
+      loyer = loyer + loyer * 0.03
+      annes = annes + 1
+    fintantque
+    
+    ecrire(['le-nombre-des-annes-est:', num2str(annes)])
 
 Fin
