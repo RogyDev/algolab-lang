@@ -1,0 +1,58 @@
+Algorithme Organizer_Nombers
+
+Variables
+
+vecteur v0 de 5 entier
+vecteur v1 de 5 entier
+entier i
+entier x
+entier y
+booleen organizee
+
+Debut
+    organizee = false
+
+    // Lire les cinq nombres
+    ecrire('enter_5_nombers:');
+    i = 0
+    pour i (i < 4)
+        lire(x)
+        v0[i] = x
+        v1[i] = x
+    finpour
+    
+    tantque(organizee == false)
+        
+        // Organisez les nombres une fois
+        i = 0
+        pour i (i < 3)
+            x = v1[i]
+            y = v1[i + 1]
+            si(x > y)
+                v1[i] = y
+                v1[i + 1] = x
+            finsi
+        finpour
+        
+        organizee = true
+
+        // Vérifiez si les numéros sont organisés
+        i = 0
+        pour i (i < 3)
+            x = v1[i]
+            y = v1[i + 1]
+            si(x > y)
+                organizee = false
+            finsi
+        finpour
+        
+    fintantque
+    
+    // Afficher les numéros organisés
+    ecrire('organizee: ')
+    i = 0
+    pour i (i < 4)
+         x = v1[i]
+         ecrire(num2str(x)) 
+    finpour
+Fin
