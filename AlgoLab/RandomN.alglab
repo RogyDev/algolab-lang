@@ -1,0 +1,30 @@
+Algorithme RandomGame
+
+Variables
+entier x
+entier input
+booleen succes
+
+Debut
+    succes = false
+    x = rand() * 10
+    x = fix(x)
+    ecrire("J_ai_choisi_un_nombre_aléatoire_entre_0_et_10")
+    ecrire("Essayez_de_le_deviner:")
+
+    tantque (~succes)
+        lire(input)
+        si (input == x)
+            ecrire("Tu_l'as_deviné!")
+            succes = true
+        finsi
+        
+         si (input > x)
+            ecrire("Trop_grande")
+        finsi
+        
+        si (input < x)
+            ecrire("Trop_petit")
+        finsi
+    fintantque
+Fin
