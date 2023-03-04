@@ -23,6 +23,7 @@ Debut
     
     tantque(organizee == false)
         
+        organizee = true
         // Organisez les nombres une fois
         i = 0
         pour i (i < 3)
@@ -31,17 +32,6 @@ Debut
             si(x > y)
                 v1[i] = y
                 v1[i + 1] = x
-            finsi
-        finpour
-        
-        organizee = true
-
-        // Vérifiez si les numéros sont organisés
-        i = 0
-        pour i (i < 3)
-            x = v1[i]
-            y = v1[i + 1]
-            si(x > y)
                 organizee = false
             finsi
         finpour
